@@ -26,32 +26,42 @@ Execute Django admin and create details for 10 books
 ```
 admin.py
 
+
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import FoodDelivery_DB, FoodDelivery_DBAdmin
+
+admin.site.register(FoodDelivery_DB, FoodDelivery_DBAdmin)
 
 models.py
 
 from django.db import models
 from django.contrib import admin
 
-class Employee(models.Model):
-    eid = models.CharField(max_length=20, help_text="Employee")
-    name = models.CharField(max_length=100)
-    salary = models.IntegerField()
-    age = models.IntegerField()
-    email = models.EmailField()
+class FoodDelivery_DB(models.Model):
+    Order_ID = models.IntegerField(primary_key=True)
+    CustomerName = models.CharField(max_length=30)
+    OrderDate = models.DateField()
+    ItemName = models.CharField(max_length=100)
+    OrderQty = models.IntegerField()
+    UnitPrice = models.FloatField()
+    TotalAmount = models.FloatField()
+    DeliveryAddress = models.CharField(max_length=200)
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ('eid', 'name', 'salary', 'age', 'email')
-
-```
+class FoodDelivery_DBAdmin(admin.ModelAdmin):
+    list_display = (
+        'Order_ID',
+        'CustomerName',
+        'OrderDate',
+        'ItemName',
+        'OrderQty',
+        'UnitPrice',
+        'TotalAmount',
+        'DeliveryAddress'
+    )
 
 
 ## OUTPUT
-![alt text](<Screenshot 2026-05-16 231219.png>)
-
-
+![alt text](image-1.png)
 
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully

@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
-# Register your models here.
+from .models import FoodDelivery_DB, FoodDelivery_DBAdmin
+
+admin.site.register(FoodDelivery_DB, FoodDelivery_DBAdmin)
+
