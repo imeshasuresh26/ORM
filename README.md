@@ -59,9 +59,15 @@ class FoodDelivery_DBAdmin(admin.ModelAdmin):
         'DeliveryAddress'
     )
 
-
+```
 ## OUTPUT
-![alt text](image-1.png)
+![alt text](<Screenshot 2026-05-16 231219.png>)
+
+
+
+//developed by 
+Imesha.S
+212225040131
 
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
