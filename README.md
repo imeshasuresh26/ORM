@@ -61,6 +61,7 @@ class FoodDelivery_DBAdmin(admin.ModelAdmin):
 
 ```
 ## OUTPUT
+
 ![alt text](<Screenshot 2026-05-16 231219.png>)
 
 
